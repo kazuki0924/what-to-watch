@@ -1,19 +1,20 @@
 {
-  "name": "what-to-watch",
+  "name": "wtw",
   "version": "0.1.0",
   "bin": {
-    "what-to-watch": "bin/what-to-watch.js"
+    "wtw": "bin/wtw.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "clean": "rm -rf ./{bin,lib,test}/{**,}/{*.d.ts,*.js}",
+    "quokka": "tsnd quokka.ts",
     "quokka-respawn": "tsnd --respawn quokka.ts"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.75.0",
+    "@types/aws-lambda": "^8.10.64",
     "@types/jest": "^26.0.10",
     "@types/node": "14.14.10",
     "@typescript-eslint/eslint-plugin": "^4.8.2",

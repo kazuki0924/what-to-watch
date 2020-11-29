@@ -1,0 +1,37 @@
+enum WatchStatus {
+  Watching
+  ToWatch
+  Watched
+}
+
+type WatchItem {
+  pk: String
+  sk: String
+  id: String
+  userGroupId: String
+  title: String
+  __typename: String
+  watchStatus: WatchStatus
+  createdAt: String
+  updatedAt: String
+  contentType: String
+}
+
+input SetWatchItemInput {
+  userGroupId: String!
+  title: String!
+  contentType: String!
+}
+
+type Mutation {
+  setWatching(input: SetWatchItemInput): WatchItem
+}
+
+type PaginatedWatchItem {
+  items: [WatchItem]
+  nextToken: String
+}
+
+type Query {
+  listWatching(limit: Int, nextToken: String): PaginatedWatchItem
+}
