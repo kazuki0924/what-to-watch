@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "what-to-watch",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/*.js": {
+				"when": "$(basename).ts"
+			},
+			"node_modules/": true,
+			"**/*.d.ts": true
+		}
+	}
+}
